@@ -1,6 +1,6 @@
 import React from "react";
 import axios from "axios";
-
+import API from '../api'
 export default class AddNewPerson extends React.Component {
   state = {
     name: ""
@@ -12,8 +12,8 @@ export default class AddNewPerson extends React.Component {
     const User = {
       name: this.state.name
     };
-    axios
-      .post(`https://jsonplaceholder.typicode.com/users`, User)
+    API
+      .post(`users`, User)
       .then((res) => {
         console.log(res);
         console.log(res.data);

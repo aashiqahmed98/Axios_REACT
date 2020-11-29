@@ -1,6 +1,6 @@
 import React from "react";
 import axios from "axios";
-
+import API from "../api";
 export default class DeletePerson extends React.Component {
   state = {
     id: ""
@@ -9,12 +9,10 @@ export default class DeletePerson extends React.Component {
   handleSubmit = (e) => {
     e.preventDefault();
 
-    axios
-      .delete(`https://jsonplaceholder.typicode.com/users/${this.state.id}`)
-      .then((res) => {
-        console.log(res);
-        console.log(res.data);
-      });
+    API.delete(`users/${this.state.id}`).then((res) => {
+      console.log(res);
+      console.log(res.data);
+    });
   };
   render() {
     console.log(this.state);
