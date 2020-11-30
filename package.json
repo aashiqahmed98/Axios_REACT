@@ -1,7 +1,7 @@
 {
   "name": "axios-react-functionalcomponents",
   "version": "1.0.0",
-  "description": "",
+  "description": "A small project with Axios and React ",
   "keywords": [],
   "main": "src/index.js",
   "dependencies": {
