@@ -17,7 +17,10 @@ export default class AddNewPerson extends React.Component {
       .then((res) => {
         console.log(res);
         console.log(res.data);
-      });
+      })
+      .catch(err=>{
+        console.log(err.message)
+      })
   };
   render() {
     console.log(this.state);
