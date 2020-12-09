@@ -1,13 +1,12 @@
 import React from "react";
-
-import axios from "axios";
-
+import API from "../api";
 export default class PersonList extends React.Component {
   state = {
     persons: []
   };
   componentDidMount() {
-    axios.get(`https://jsonplaceholder.typicode.com/users`).then((data) => {
+    API
+      .get('/users').then((data) => {
       const persons = data.data;
       this.setState({ persons });
       console.log(this.state.persons);
@@ -15,6 +14,7 @@ export default class PersonList extends React.Component {
   }
   render() {
     const { persons } = this.state;
+    console.log('Stato',persons)
     return (
       <ul>
         {persons.map((person) => (

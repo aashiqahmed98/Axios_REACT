@@ -15,7 +15,7 @@ export default class AddNewPerson extends React.Component {
     API
       .post(`users`, User)
       .then((res) => {
-        console.log(res);
+        // console.log(res);
         console.log(res.data);
       })
       .catch(err=>{
